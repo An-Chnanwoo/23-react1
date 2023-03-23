@@ -4,7 +4,13 @@
 
 ## 0323(4주차)
 
-JSX
+JSX 역할
+
+- JSX는 내부적으로 XML/HTML 코드를자바스크립트로 변환하는 과정
+
+- 
+
+Bable 호출 React.createlement();
 
 A syntax extenstion to JavaScript = 자바스크립트의 확장문법 <br>
 
@@ -20,7 +26,7 @@ JSX의 코드예제
 
 프로젝트 생성
 
-npx create-react-app 이름 
+    npx create-react-app 이름 
 
 1. README.md 백업
 
