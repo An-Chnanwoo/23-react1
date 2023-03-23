@@ -4,13 +4,6 @@
 
 ## 0323(4주차)
 
-
-
-## 0316(3주차)
-### 학습내용
-
-실습4 create-react-app // local에 react를 개발하는데 필요한 모든 패키지를 설치하고 프로젝트를 생성
-
 프로젝트 생성
 
 npx create-react-app 이름
@@ -28,6 +21,11 @@ npx create-react-app 이름
 6. 로컬에서 이름 push
 
 7. GitHub 저장소 확인
+
+## 0316(3주차)
+### 학습내용
+
+실습4 create-react-app // local에 react를 개발하는데 필요한 모든 패키지를 설치하고 프로젝트를 생성
 
 cd my-app
 
