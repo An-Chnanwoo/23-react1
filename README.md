@@ -4,6 +4,10 @@
 
 ## 0323(4주차)
 
+내려받기
+
+Code -> https복사 -> openforder -> 터미널 -> git clone https주소
+
 프로젝트 생성
 
 npx create-react-app 이름
