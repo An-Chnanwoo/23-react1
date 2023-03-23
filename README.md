@@ -7,7 +7,6 @@
 JSX 역할
 
 - JSX는 내부적으로 XML/HTML 코드를 자바스크립트로 변환한다
-
 - React가 createElement함수를 사용하여 자동으로 자바스크립트로 변환해 준다
 
 - 만일 JS작업할 경우 직접 createElement합수를 사용해야 한다
@@ -19,6 +18,8 @@ JSX의 장점
 - 가독성이 향상된다
 
 - Injection Attack이라 불리는 해킹 방법을 방어함으로서 보안에 강하다
+
+JSX 사용법
 
 Bable 호출 React.createlement();
 
