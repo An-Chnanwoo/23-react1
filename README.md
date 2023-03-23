@@ -16,7 +16,7 @@ const element = h1 Hello, world! h1
 
 내려받기
 
-Code -> https복사 -> openforder -> 터미널 -> git clone https주소
+    Code -> https복사 -> openforder -> 터미널 -> git clone https주소
 
 프로젝트 생성
 
