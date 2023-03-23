@@ -4,13 +4,23 @@
 
 ## 0323(4주차)
 
+JSX
+
+A syntax extenstion to JavaScript = 자바스크립트의 확장문법 <br>
+
+JavaScript + XML/HTML을 합친 것
+
+JSX의 코드예제
+
+const element = <h1>Hello, world!</h1>
+
 내려받기
 
 Code -> https복사 -> openforder -> 터미널 -> git clone https주소
 
 프로젝트 생성
 
-npx create-react-app 이름
+npx create-react-app 이름 
 
 1. README.md 백업
 
@@ -27,6 +37,8 @@ npx create-react-app 이름
 7. GitHub 저장소 확인
 
 npm start
+
+ctrl + ` 터미널
 
 ## 0316(3주차)
 ### 학습내용
