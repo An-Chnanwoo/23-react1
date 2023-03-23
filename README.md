@@ -12,7 +12,7 @@ JavaScript + XML/HTML을 합친 것
 
 JSX의 코드예제
 
-const element = <h1>Hello, world!</h1>
+const element = h1 Hello, world! h1
 
 내려받기
 
