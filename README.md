@@ -12,7 +12,7 @@ JavaScript + XML/HTML을 합친 것
 
 JSX의 코드예제
 
-const element = h1 Hello, world! h1
+    const element = h1 Hello, world! h1
 
 내려받기
 
@@ -51,9 +51,9 @@ npm start
 
 crossorigin 속성이 필요한 이유
 
-CDN을 통해 React를 사용한다면, crossorigin 어트리뷰트(attribute)와 함께 사용하는 것을 권장합니다.
+    CDN을 통해 React를 사용한다면, crossorigin 어트리뷰트(attribute)와 함께 사용하는 것을 권장합니다.
 
-    //<script crossorigin src="..."></script>
+        //<script crossorigin src="..."></script>
 
 CDN 링크
 
