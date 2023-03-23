@@ -22,6 +22,8 @@ npx create-react-app 이름
 
 7. GitHub 저장소 확인
 
+npm start
+
 ## 0316(3주차)
 ### 학습내용
 
@@ -30,7 +32,6 @@ npx create-react-app 이름
 cd my-app
 
 npm start
-
 
 crossorigin 속성이 필요한 이유
 
