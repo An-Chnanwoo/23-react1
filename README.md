@@ -11,7 +11,23 @@
 
 실습4 create-react-app // local에 react를 개발하는데 필요한 모든 패키지를 설치하고 프로젝트를 생성
 
-npx create-react-app my-app
+프로젝트 생성
+
+npx create-react-app 이름
+
+1. README.md 백업
+
+2. local에 있는 저장소 이름 바꾸기/삭제
+
+3. 새 프로젝트 생성(이름)
+
+4. README.md 덮어쓰기
+
+5. GitHub 저장소 삭제
+
+6. 로컬에서 이름 push
+
+7. GitHub 저장소 확인
 
 cd my-app
 
