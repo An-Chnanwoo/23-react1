@@ -4,7 +4,7 @@
 
 ## 0323(4주차)
 
-<img src="/Chanwoo/Book.-jsx.PNG">
+<img src="image/Book-jsx.png">
 
 JSX 역할
 - JSX는 내부적으로 XML/HTML 코드를 자바스크립트로 변환한다
