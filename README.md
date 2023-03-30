@@ -3,7 +3,7 @@
 # 안찬우(201830220)
 
 ## 0323(4주차)
-### 실습내용
+### 작성코드
 
 (Book.jsx)<br>
 
@@ -58,6 +58,8 @@
 export default Library;
 
 export default Book;
+
+### 학습내용
 
 JSX 역할
 - JSX는 내부적으로 XML/HTML 코드를 자바스크립트로 변환한다
