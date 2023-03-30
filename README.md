@@ -84,6 +84,7 @@
         - 속성이 다른 엘리먼트를 생성하려면 새로운 props를 컴포넌트에 전달
     3. props 사용법
         - JSX에서는 key-value쌍으로 props를 구성
+        
             function App(props){
                 return(
                     <Profile
