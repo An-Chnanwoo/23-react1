@@ -6,7 +6,8 @@
 ### 실습내용
 
 (Book.jsx)<br>
-import React from "react";
+
+    import React from "react";
 
     function Book(props){
         return(
@@ -18,8 +19,9 @@ import React from "react";
     }
 
 (Library.jsx)<br>
-import React from "react";<br>
-import Book from "./Book";<br>
+
+    import React from "react";
+    import Book from "./Book";
 
     function Library(props){
     return(
@@ -32,12 +34,13 @@ import Book from "./Book";<br>
 }
 
 (index.js)<br>
-import React from 'react';<br>
-import ReactDOM from 'react-dom/client';<br>
-import './index.css';<br>
-import App from './App';<br>
-import reportWebVitals from './reportWebVitals';<br>
-import Library from './chapter3/Library';<br>
+
+    import React from 'react';
+    import ReactDOM from 'react-dom/client';
+    import './index.css';
+    import App from './App';
+    import reportWebVitals from './reportWebVitals';
+    import Library from './chapter3/Library';
 
     const root = ReactDOM.createRoot(document.getElementById('root'));
     root.render(
@@ -47,10 +50,10 @@ import Library from './chapter3/Library';<br>
     document.getElementById('root')
     );
 
-// If you want to start measuring performance in your app, pass a function<br>
-// to log results (for example: reportWebVitals(console.log))<br>
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals<br>
-reportWebVitals();
+    // If you want to start measuring performance in your app, pass a function
+    // to log results (for example: reportWebVitals(console.log))
+    // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+    reportWebVitals();
 
 export default Library;
 
