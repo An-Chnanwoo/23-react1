@@ -6,6 +6,38 @@
 
 <img src="./image/Book-jsx.png">
 
+### 실습내용
+
+(Book.jsx)
+import React from "react";
+
+function Book(props){
+  return(
+    <div>
+      <h1>{`이 책의 이름은 ${props.name}입니다. `}</h1>
+      <h2>{`이 책은 총 ${props.numOfPage}페이지로 이뤄져 있습니다.`}</h2>
+    </div>
+  )
+}
+
+(Library.jsx)
+import React from "react";
+import Book from "./Book";
+
+function Library(props){
+  return(
+    <div>
+      <Book name="처음 만난 파이썬" numOfPage={300}/>
+      <Book name="처음 만난 AWS" numOfPage={400}/>
+      <Book name="처음 만난 리액트" numOfPage={500}/>
+    </div>
+  )
+}
+
+export default Library;
+
+export default Book;
+
 JSX 역할
 - JSX는 내부적으로 XML/HTML 코드를 자바스크립트로 변환한다
 - React가 createElement함수를 사용하여 자동으로 자바스크립트로 변환해 준다
