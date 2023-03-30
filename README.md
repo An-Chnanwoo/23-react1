@@ -5,7 +5,8 @@
 ## 작성코드
 
 #### 실습 4.4 시계 만들기  
-Clock.jsx
+#### Clock.jsx
+
     import React from "react";
 
     function Clock(props){
@@ -18,7 +19,8 @@ Clock.jsx
     }
     export default Clock;
 
-index.jsx  
+#### index.jsx  
+
     import Library from './chapter3/Library';
     import Clock from './chapter4/Clock';
 
