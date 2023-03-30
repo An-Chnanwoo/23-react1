@@ -2,7 +2,7 @@
 
 # 안찬우(201830220)
 ## 0330(5주차)
-### 작성코드
+## 작성코드
 #### 렌더링된 엘리먼트 업데이트하기  
     <!DOCTYPE html>
     <html lang="ko">
@@ -32,7 +32,7 @@
     <div id="root"></div>
     </body>
     </html>
-### 학습내용
+## 학습내용
 
 #### 엘리먼트 렌더링하기
 #### Root DOM node  
@@ -76,7 +76,7 @@ pakage.json
 
 
 ## 0323(4주차)
-### 작성코드
+## 작성코드
 
 #### (Book.jsx)<br>
 
@@ -130,7 +130,7 @@ pakage.json
 
 export default Library;  
 export default Book;
-### 학습내용
+## 학습내용
 
 #### JSX 역할
 - JSX는 내부적으로 XML/HTML 코드를 자바스크립트로 변환한다
@@ -179,7 +179,7 @@ npm start
 ctrl + ` 터미널
 
 ## 0316(3주차)
-### 학습내용
+## 학습내용
 
 실습4 create-react-app // local에 react를 개발하는데 필요한 모든 패키지를 설치하고 프로젝트를 생성
 
@@ -264,7 +264,7 @@ node -v, node --version
 npx- npm에서 나온것 1회성으로 실행시키기 위한것
 
 ## 0309(2주차) 
-### 학습내용
+## 학습내용
 
 push방법과 버전확인
 깃허브등록방법
