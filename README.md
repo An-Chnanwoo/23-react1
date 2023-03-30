@@ -8,7 +8,7 @@
 
 ### 실습내용
 
-(Book.jsx)
+(Book.jsx)<br>
 import React from "react";
 
 function Book(props){
