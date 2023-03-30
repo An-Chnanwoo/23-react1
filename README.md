@@ -3,6 +3,41 @@
 # 안찬우(201830220)
 ## 0330(5주차)
 ## 작성코드
+
+## 실습 4.4 시계 만들기  
+Clock.jsx
+    import React from "react";
+
+    function Clock(props){
+    return(
+        <div>
+        <h1>안녕, 리액트!</h1>
+        <h2>현재 시간 : {new Date().toLocaleTimeString()}</h2>
+        </div>
+    );
+    }
+    export default Clock;
+
+index.jsx  
+    import Library from './chapter3/Library';
+    import Clock from './chapter4/Clock';
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+
+    setInterval(() => {
+    root.render(
+        <React.StrictMode>
+        <Clock/>
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
+    }, 1000);
+
+    // If you want to start measuring performance in your app, pass a function
+    // to log results (for example: reportWebVitals(console.log))
+    // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+    reportWebVitals();
+
 #### 렌더링된 엘리먼트 업데이트하기  
     <!DOCTYPE html>
     <html lang="ko">
