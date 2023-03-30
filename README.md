@@ -13,10 +13,10 @@ import React from "react";
 
 function Book(props){
   return(
-    <div>
+    <!-- <div>
       <h1>{`이 책의 이름은 ${props.name}입니다. `}</h1>
       <h2>{`이 책은 총 ${props.numOfPage}페이지로 이뤄져 있습니다.`}</h2>
-    </div>
+    </div> -->
   )
 }
 
@@ -26,11 +26,11 @@ import Book from "./Book";
 
 function Library(props){
   return(
-    <div>
+    <!-- <div>
       <Book name="처음 만난 파이썬" numOfPage={300}/>
       <Book name="처음 만난 AWS" numOfPage={400}/>
       <Book name="처음 만난 리액트" numOfPage={500}/>
-    </div>
+    </div> -->
   )
 }
 
