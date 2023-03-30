@@ -4,21 +4,33 @@
 ## 0330(5주차)
 ### 학습내용
 
-#### 1. 엘리먼트의 정의  
- - 엘리먼트는 리액트 앱을 구성하는 요소를 의미합니다.
- - 공식페이지에는 "엘리먼트는 리액트의 가장 작은 빌딩 블록들" 이라고 설명하고 있습니다.
- - 웹사이트의 경우는 DOM 엘리먼트이며 HTML요소를 의미합니다.
+#### 엘리먼트 렌더링하기
+#### 엘리먼트의 정의  
+ - 엘리먼트는 리액트 앱을 구성하는 요소를 의미
+ - 공식페이지에는 "엘리먼트는 리액트의 가장 작은 빌딩 블록들" 이라고 설명
+ - 웹사이트의 경우는 DOM 엘리먼트이며 HTML요소를 의미
 
    #### 리액트 엘리먼트와 DOM엘리먼트의 차이점
-    - 리액트 엘리먼트는 Virtual DOM 형태를 취하고 있습니다.
-    - DOM 엘리먼트는 페이지의 모든 정보를 갖고 있어 무겁습니다.
-    - 반면 리액트 엘리먼트는 변화한 부분만 가지고 있습니다.
+    - 리액트 엘리먼트는 Virtual DOM 형태를 취하고 있다
+    - DOM 엘리먼트는 페이지의 모든 정보를 갖고 있어 무겁다
+    - 반면 리액트 엘리먼트는 변화한 부분만 가지고 있다
 
-#### 2. 엘리먼트의 생김새  
+#### 엘리먼트의 생김새  
  - 리액트 엘리먼트는 자바스크립트 객체의 형태로 존재
  - 컴포넌트, 속성, 및 내부의 모든 자식에 대한 정보를 포합하고 있는 일반적인 자바스크립트
  - 이 객체는 마음대로 변경할 수 없는 불변성을 갖고 있다.
 
+    내부적으로 자바스크립트 객체를 만드는 함수 => createElement()  
+    - 첫 번째 매개변수가 type. 태그가 들어가면 그대로 표현, 리액트 컴포넌트가 들어가면 결국 태그로 만든다
+
+#### 엘리먼트의 특징  
+ - 가장 큰 특징은 불변성
+ - 즉, 한번 생성된 엘리먼트의 children이나 속성(attributes)을 바꿀 수 없다
+
+    만일 내용이 바뀌면?
+    - 이 때는 컴포넌트를 통해 새로운 엘리먼트를 생성
+    - 그 다음 이전 엘리먼트와 교체를 하는 방법으로 내용을 바꾼다
+    - 이렇게 교체하는 작업을 위해 Virtual DOM을 사용
 
 Clone
 
@@ -80,10 +92,8 @@ pakage.json
     // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
     reportWebVitals();
 
-export default Library;
-
+export default Library;  
 export default Book;
-
 ### 학습내용
 
 #### JSX 역할
@@ -104,22 +114,14 @@ export default Book;
     const element = 안녕{name}
 - 만일 html이란 xml에 자바스크립트 코드를 사용하고 싶으면 {}괄호를 사용
 
-Bable 호출 React.createlement();
-
-A syntax extenstion to JavaScript = 자바스크립트의 확장문법 <br>
-
-JavaScript + XML/HTML을 합친 것
-
-JSX의 코드예제
-
+Bable 호출 React.createlement();  
+A syntax extenstion to JavaScript = 자바스크립트의 확장문법  
+JavaScript + XML/HTML을 합친 것  
+ #### JSX의 코드예제  
     const element = h1 Hello, world! h1
-
-내려받기
-
+#### 내려받기  
     Code -> https복사 -> openforder -> 터미널 -> git clone https주소
-
-프로젝트 생성
-
+#### 프로젝트 생성  
     npx create-react-app 이름 
 
 1. README.md 백업
