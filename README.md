@@ -70,6 +70,8 @@
     </body>
     </html>
 ## 학습내용
+
+
 #### 5.2 props에 대해 알아보기
     1. props의 개념
         - props는 prop(property : 속성)의 준말
@@ -80,6 +82,17 @@
     2. props의 특징
         - 읽기전용, 변경할 수 없다는 의미
         - 속성이 다른 엘리먼트를 생성하려면 새로운 props를 컴포넌트에 전달
+    3. props 사용법
+        - JSX에서는 key-value쌍으로 props를 구성
+            function App(props){
+                return(
+                    <Profile
+                        name = "소플"
+                        introduction="안녕하세요, 소플입니다."
+                        viewCount={1500}
+                    />
+                );
+            }
 #### 5.1 컴포넌트에 대해 알아보기
  - 리액트는 컴포넌트 기반의 구조를 같는다
  - 작은 컴포넌트가 모여 큰 컴포넌트를 구성하고 다시 이런 컴포넌트들이 모여서 전체 페이지를 구성하는 것을 의미
