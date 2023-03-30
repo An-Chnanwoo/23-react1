@@ -5,10 +5,11 @@
 ### 학습내용
 
 #### 엘리먼트 렌더링하기
-    Root DOM node  
-    다음 html 코드는 id값이 root인 div태그로 단순하지만 리액트에 필수로 들어가는 중요한 코드  
-    이 div태그안에 리액트 엘리먼트가 렌더링 되며 이 것을 DOM node라고 한다  
-        <div id = "root"></div>
+Root DOM node  
+다음 html 코드는 id값이 root인 div태그로 단순하지만 리액트에 필수로 들어가는 중요한 코드  
+이 div태그안에 리액트 엘리먼트가 렌더링 되며 이 것을 DOM node라고 한다  
+
+    <div id = "root"></div>
 
 #### 엘리먼트의 정의  
  - 엘리먼트는 리액트 앱을 구성하는 요소를 의미
