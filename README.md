@@ -71,13 +71,35 @@
     </html>
 ## 학습내용
 
-#### 컴포넌트 만들기  
-
+#### 5.3 컴포넌트 만들기  
 1. 컴포넌트의 종류
  - 리액트 초기 버전을 사용할 때는 클래스형 컴포넌트를 주로 사용
  - 이후 Hook이라는 개념이 나오면서 최근에는 함수형 컴포넌트를 주로 사용
- - 예전에 작성된 코드나 문서들이 클래스형 컴포넌트를 사용하고 있기 때문에
+ - 예전에 작성된 코드나 문서들이 클래스형 컴포넌트를 사용하고 있기 때문에 
  클래스형 컴포넌트와 컴포넌트의 생명주기에 관해서도 공부해야 함
+    
+2. 함수형 컴포넌트
+    Welcome컴포넌트는 props를 맏아 받은 props중 name키의 값을 "안녕" 뒤에 넣어 반환한다
+    - function Welcome(props){
+        return <h1> 안녕, {props.name}</h1>;
+    }
+
+3. 클래스형 컴포넌트
+
+4. 컴포넌트 이름 짓기
+    - 이름은 항상 대문자로 시작
+    - 리액트는 소문자로 시작하는 컴포넌트를 DOM으로 인식하기 때문
+    - 컴포넌트 파일과 컴포넌트 이름은 동일하게 해야함
+
+5. 컴포넌트의 렌더링
+    - function Welcome(props){
+        return <h1> 안녕, {props.name}</h1>;
+    }
+    const element = <Welcome name = "안제"/>;
+    ReactDOM.render(
+        element,
+        document.getElementById('root');
+    );
 #### 5.2 props에 대해 알아보기
     1. props의 개념
         - props는 prop(property : 속성)의 준말
