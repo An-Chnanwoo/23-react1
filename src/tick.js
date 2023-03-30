@@ -7,4 +7,4 @@ function tick(){
   );
   ReactDOM.render(element, document.getElementById('root'));
 }
-setInterval(tick, 100);
+setInterval(tick,1000);
