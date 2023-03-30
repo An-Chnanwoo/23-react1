@@ -4,6 +4,39 @@
 ## 0330(5주차)
 ### 학습내용
 
+### 작성코드
+#### 렌더링된 엘리먼트 업데이트하기
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안녕, 리액트!</title>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+    <script type="text/babel">
+        function tick(){
+        const element = (
+        <div>
+            <h1>안녕, 리액트!</h1>
+            <h2>현재 시간 : {new Date().toLocaleTimeString()}</h2>
+            </div>
+        );
+        ReactDOM.render(element, document.getElementById('root'));
+        }
+        setInterval(tick,1000);
+    </script>
+    <div id="root"></div>
+    </body>
+    </html>
+
+
+
 #### 엘리먼트 렌더링하기
 #### Root DOM node  
 다음 html 코드는 id값이 root인 div태그로 단순하지만 리액트에 필수로 들어가는 중요한 코드  
