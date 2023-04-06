@@ -29,9 +29,10 @@
     );
     }
     export default Clock;
+```
 
 #### index.jsx  
-
+```js
     import Library from './chapter3/Library';
     import Clock from './chapter4/Clock';
 
@@ -50,9 +51,11 @@
     // to log results (for example: reportWebVitals(console.log))
     // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
     reportWebVitals();
-
+```
 
 #### 4.3 렌더링된 엘리먼트 업데이트하기 (교제 130p)  
+
+```js
     <!DOCTYPE html>
     <html lang="ko">
     <head>
@@ -81,6 +84,7 @@
     <div id="root"></div>
     </body>
     </html>
+``` 
 ## 학습내용
 #### 5.5 컴포넌트 추출
     - 복잡한 컴포넌트를 쪼개서 여러 개의 컴포넌트로 나눌 수도 있다
