@@ -27,12 +27,31 @@
     import React from "react";
     import Comment from "./Comment";
 
+    const comments = [
+    {
+        name: "이인재",
+        comment: "안녕하세요, 소플입니다",
+    },
+    {
+        name: "유재석",
+        comment: "리액트 재미있어요~!",
+    },
+    {
+        name: "강민경",
+        comment: "저도 리액트 배워보고 싶어요!!",
+    },
+    ];
+
     function CommentList(props){
     return (
         <div>
-        <Comment/>
+        {comments.map((comment) => {
+            return(
+            <Comment name={comment.name} comment={comment.comment}/>
+            );
+        })}
         </div>
-    )
+    );
     }
     export default CommentList;
 ```
@@ -50,6 +69,26 @@ root.render (
 ```
 
 ## 학습내용
+
+#### 6.1 state  
+    -state는 리액트 컴포넌트의 상태를 의미
+    -상태의 의미는 정상인지 비정상인지가 아니라 컴포넌트의 데이터를 의미
+    -정확히는 변경가능한 데이터를 의미
+    -state가 변하면 다시 렌더링이 되기 때문에 렌더링가 관련된 값만 state에 포합시켜야 함
+
+#### 6.2 state의 특징  
+    -리액트 만의 특별한 형태가 아님 단지 자바스크립트 객체일 뿐이다
+
+    -Like는 class컴포넌트
+    -constructor는 생성자익 그 안에 있는 this.state가 현 컴포넌트의 state
+    -합수형에서는 useState()라는 함수를 사용
+```js
+    class LikeButton extends React.Component{
+        constructor(props){
+            super(props);
+        }
+    }
+```
 
 #### 5.5 컴포넌트 추출 (p157~160)
     - 복잡한 컴포넌트를 쪼개서 여러 개의 컴포넌트로 나눌 수도 있다
