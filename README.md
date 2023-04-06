@@ -6,7 +6,51 @@
 
 ## 작성코드 
 
+#### 5.6(실습) 댓글 컴포넌트 만들기
+
+#### Comment.jsx  
+```js
+    import React from "react";
+
+    function Comment(props){
+    return(
+        <div>
+        <h1>내가 만든 첫 컴포넌트</h1>
+        </div>
+    )
+    }
+    export default Comment;
+```
+
+#### CommentList.jsx  
+```jsx
+    import React from "react";
+    import Comment from "./Comment";
+
+    function CommentList(props){
+    return (
+        <div>
+        <Comment/>
+        </div>
+    )
+    }
+    export default CommentList;
+```
+#### index.js
+```js
+import CommentList from './chapter5/CommentList';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render (
+  <React.StrictMode>
+    <CommentList/>
+  </React.StrictMode>,
+);
+```
+
 ## 학습내용
+
 #### 5.5 컴포넌트 추출 (p157~160)
     - 복잡한 컴포넌트를 쪼개서 여러 개의 컴포넌트로 나눌 수도 있다
     - 큰 컴포넌트에서 일부를 추출해서 새로운 컴포넌트를 만드는 것
@@ -29,7 +73,10 @@
         )
     }
 ```
-
+추출 후 다시 결합한 UesrInfo를 Comment 컴포넌트 반영하면 다음과 같은 모습이 된다
+```js
+    <Avatar user={props.aughor}/>
+```
 
 
 ## 0330(5주차)
