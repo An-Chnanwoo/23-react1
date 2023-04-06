@@ -104,7 +104,6 @@
         
     2. 함수형 컴포넌트
         -Welcome컴포넌트는 props를 맏아 받은 props중 name키의 값을 "안녕" 뒤에 넣어 반환한다
-            
 ```js
             function Welcome(props){
                 return <h1> 안녕, {props.name}</h1>;
