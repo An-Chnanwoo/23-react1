@@ -14,8 +14,20 @@
 
  ```js
     <div>className="user-info">
-        <img className="avatar" src={props.author.avatarUrl} alt = {props.author.name}/>
+        <img className="avatar" 
+            src={props.author.avatarUrl} 
+            alt = {props.author.name}/>
     </div>
+```
+위의 결과가 아래의 결과로
+```js
+    function Avatar(props){
+        return(
+            <img className="avatar" 
+                src={props.author.avatarUrl} 
+                alt = {props.author.name}/>
+        )
+    }
 ```
 
 
