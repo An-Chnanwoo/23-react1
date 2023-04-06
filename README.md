@@ -12,11 +12,11 @@
     - 큰 컴포넌트에서 일부를 추출해서 새로운 컴포넌트를 만드는 것
     - 실무에서는 처음부터 1개의 컴포넌트에 하나의 가능만 사요하도록 설계한는 것이 좋다
 
-    ```js
-        <div>className="user-info">
-            <img className="avatar" src={props.author.avatarUrl} alt = {props.author.name}/>
-        </div>
-    ```
+ ```js
+    <div>className="user-info">
+        <img className="avatar" src={props.author.avatarUrl} alt = {props.author.name}/>
+    </div>
+```
 
 
 
