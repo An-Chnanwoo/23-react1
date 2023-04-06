@@ -17,7 +17,7 @@
 
 #### 실습 4.4 시계 만들기  
 #### Clock.jsx
-
+```js
     import React from "react";
 
     function Clock(props){
@@ -50,6 +50,7 @@
     // to log results (for example: reportWebVitals(console.log))
     // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
     reportWebVitals();
+
 
 #### 4.3 렌더링된 엘리먼트 업데이트하기 (교제 130p)  
     <!DOCTYPE html>
