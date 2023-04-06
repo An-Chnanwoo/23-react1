@@ -104,10 +104,12 @@
         
     2. 함수형 컴포넌트
         -Welcome컴포넌트는 props를 맏아 받은 props중 name키의 값을 "안녕" 뒤에 넣어 반환한다
+            
+```js
             function Welcome(props){
                 return <h1> 안녕, {props.name}</h1>;
             }
-
+```
     3. 클래스형 컴포넌트
 
     4. 컴포넌트 이름 짓기
@@ -116,7 +118,9 @@
         - 컴포넌트 파일과 컴포넌트 이름은 동일하게 해야함
 
     5. 컴포넌트의 렌더링
-        - function Welcome(props){
+
+```js
+        function Welcome(props){
             return <h1> 안녕, {props.name}</h1>;
         }
         const element = <Welcome name = "안제"/>;
@@ -124,6 +128,7 @@
             element,
             document.getElementById('root');
         );
+```
 #### 5.2 props에 대해 알아보기
     1. props의 개념
         - props는 prop(property : 속성)의 준말
