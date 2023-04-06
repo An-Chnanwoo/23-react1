@@ -13,9 +13,15 @@
     import React from "react";
 
     function Comment(props){
-    return(
-        <div>
-        <h1>내가 만든 첫 컴포넌트</h1>
+    return (
+        <div style={styles.wrapper}>
+        <div style={styles.imageContainer}>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Portrait_Placeholder.png" alt="프로필 이미지" style={styles.image}/>
+        </div>
+        <div style={styles.contentContainer}>
+            <span style={styles.nameText}>이인재</span>
+            <span style={styles.commentText}>제가 만든 첫 컴포넌트 입니다.</span>
+        </div>
         </div>
     )
     }
@@ -27,29 +33,11 @@
     import React from "react";
     import Comment from "./Comment";
 
-    const comments = [
-    {
-        name: "이인재",
-        comment: "안녕하세요, 소플입니다",
-    },
-    {
-        name: "유재석",
-        comment: "리액트 재미있어요~!",
-    },
-    {
-        name: "강민경",
-        comment: "저도 리액트 배워보고 싶어요!!",
-    },
-    ];
+    function CommentList(props) {
 
-    function CommentList(props){
     return (
         <div>
-        {comments.map((comment) => {
-            return(
-            <Comment name={comment.name} comment={comment.comment}/>
-            );
-        })}
+        <Comment/>
         </div>
     );
     }
@@ -70,18 +58,26 @@ root.render (
 
 ## 학습내용
 
-#### 6.1 state  
-    -state는 리액트 컴포넌트의 상태를 의미
-    -상태의 의미는 정상인지 비정상인지가 아니라 컴포넌트의 데이터를 의미
-    -정확히는 변경가능한 데이터를 의미
-    -state가 변하면 다시 렌더링이 되기 때문에 렌더링가 관련된 값만 state에 포합시켜야 함
+#### 6.2 생명주기 알아보기
+    생명주기는 컴포넌트의 생성 시점, 사용 시점, 종료 시점을 나타내는 것
+    constructor가 실행되면서 컴포넌트가 생성
+    생성 직후 conponentDidMount()함수가 호출됨
+    컴포넌트가 소멸하기 전까지 여러번 렌더링
+    렌더링은 porps, setState(), forceUpdate()에 의해 상태가 변경되면 이루어짐
+    렌더링이 끝나면 conponentDinUpdate()함수가 호출
+    컴포넌트가 언마운트 되면 conponentWillUnmount()함수가 호출
 
+#### component
+
+#### element
+
+#### instance
 #### 6.2 state의 특징  
     -리액트 만의 특별한 형태가 아님 단지 자바스크립트 객체일 뿐이다
 
     -Like는 class컴포넌트
     -constructor는 생성자익 그 안에 있는 this.state가 현 컴포넌트의 state
-    -합수형에서는 useState()라는 함수를 사용
+    -함수형에서는 useState()라는 함수를 사용
 ```js
     class LikeButton extends React.Component{
         constructor(props){
@@ -89,6 +85,11 @@ root.render (
         }
     }
 ```
+#### 6.1 state  
+    -state는 리액트 컴포넌트의 상태를 의미
+    -상태의 의미는 정상인지 비정상인지가 아니라 컴포넌트의 데이터를 의미
+    -정확히는 변경가능한 데이터를 의미
+    -state가 변하면 다시 렌더링이 되기 때문에 렌더링가 관련된 값만 state에 포합시켜야 함
 
 #### 5.5 컴포넌트 추출 (p157~160)
     - 복잡한 컴포넌트를 쪼개서 여러 개의 컴포넌트로 나눌 수도 있다
