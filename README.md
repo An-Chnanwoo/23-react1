@@ -5,6 +5,76 @@
 ## 0413(7주차)
 
 ## 작성코드
+
+#### 7.9 (실습) 훅을 사용한 컴포넌트 개발
+
+#### index.js
+```js
+import Accommodate from './chapter7/Accommodate';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <Accommodate/>
+  </React.StrictMode>
+);
+```
+#### Accommodate.jsx
+```js
+import React, {useState, useEffect} from "react";
+import useCounter from "./useCounter";
+
+const MAX_CAPACITY = 10;
+
+function Accommodate(props){
+  const [isFull, setIsFull] = useState(false);
+  const [count, increaseCount, decreaseCount] = useCounter(0);
+
+  useEffect(() => {
+    console.log("=====================");
+    console.log("useEffect() is called.");
+    console.log(`isFull: ${isFull}`);
+  });
+
+  useEffect(() => {
+    setIsFull(count >= MAX_CAPACITY);
+    console.log(`Current count value: ${count}`);
+  }, [count]);
+  
+  return(
+    <div style={{padding:16}}>
+      <p>{`총 ${count}명 수용했습니다.`}</p>
+
+      <button onClick={increaseCount} disabled={isFull}>
+        입장
+      </button>
+      <button onClick={decreaseCount}>
+        퇴장
+      </button>
+
+      {isFull && <p style={{color: "red"}}>정원이 가득찼습니다.</p>}
+    </div>
+  );
+}
+
+export default Accommodate;
+```
+
+#### useCounter.jsx
+```js
+import React, {useState} from "react";
+
+function useCounter(initialValue){
+  const [count, setCount] = useState(initialValue);
+
+  const increaseCount = () => setCount((count) => count + 1);
+  const decreaseCount = () => setCount((count) => Math.max(count - 1, 0));
+
+  return [count, increaseCount, decreaseCount];
+}
+
+export default useCounter;
+```
 #### 생명주기 함수 사용해보기 
 notifications 비우기   
 ```js
@@ -33,7 +103,7 @@ Notification.jsx에 추가
 ```
 ## 학습내용
 
-p231 NOTE설명 확인하기
+p231 ~ p232 NOTE설명 확인하기
 #### 7.8 나만의 훅 만들기 (p226 ~ p232)
     1. 커스텀 훅을 만들어야 하는 상황
     2. 커스텀 훅 추출하기
