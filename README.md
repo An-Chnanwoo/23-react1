@@ -5,7 +5,6 @@
 ## 0413(7주차)
 
 ## 작성코드
-
 #### 생명주기 함수 사용해보기 
 notifications 비우기   
 ```js
@@ -33,6 +32,47 @@ Notification.jsx에 추가
   }
 ```
 ## 학습내용
+
+#### useEffect
+    - useState와 함께 가장 많이 사용하는 Hook
+    - 사이드 이펙트를 수행하기 위한 것
+    - 영어로 부작용을 의미, '개발자가 의도하지 않은 코드가 실행되면서 버그가 발생하는 것'
+    - 리액트에서는 효과 혹은 영향을 뜻하는 effect의 의미
+    - 서버에서 데이터를 받아오거나 수동으로 DOM을 변경하는 등의 작업
+    - 다른 컴포넌트에 영향을 미칠 수 있으며, '렌더링 중에는 작업이 완료될 수 없기 때문'에 렌더링이 끝난 후 실행되야 함
+    - '클래스 컴포넌트의 생명주기와 같은 기능을 하나로 통합한 기능을 제공'
+    - useEffect가 effect에 가깝다고 설명하지만 오해에 불과함
+    - Side effet는 본래의 목적ㅂ다 부수적으로 다른효과가 있는것을 의미
+
+#### useState()함수 사용법
+```js
+    import React, {useState} from "react"
+
+    function Counter(props){
+        const [count, setCount] = useState(0);
+
+        return(
+            <div>
+                <p> 총 {count}번 클릭</p>
+                <button onClick={() => setCount(count +1)}>
+                    클릭
+                </button>
+            </div>
+        );
+    }
+```
+#### 7.2 useState   
+    - useState는 함수형 컴포넌트에서 state를 사용하기 위한 Hook
+    - 버튼을 클릭할 때마다 카운트가 증가하는 함수형 컴포넌트
+
+#### 7.1 훅   
+    - 클래스형 컴포넌트에서는 생성자에서 state를 정의하고 setState()함수를 통해 state를 업데이트
+    - 이전에 사용하던 함수형 컴포넌트는 별도로 state를 정의하거나, 컴포넌트의 생명주기에 맞춰서 어떤 코드가 실행되도록 할 수 없다
+    - 함수형 컴포넌트에서도 state나 생명주기 함수의 기능을 사용하게 해주기 위해 추가된 기능이 훅(Hook)
+    - 함수형 컴포넌트도 훅을 사용하여 클래스형 컴포넌트의 기능을 모두 동일하게 구현
+    - Hook이란 'state와 생명주기 기능에 갈고리를 걸어 원하는 시점에 정해진 함수를 실행되도록 만든 함수'
+    - 훅의 이름은 모두 'use'로 시작
+    - 사용자 정의 훅(custom hook)을 만들 수 있으며 이 경우에 이름은 자유롭게 할 수 있으나 'use'로 반드시 시작해야함.
 
 React Developer Tools
 -  리액트를 위해서 별도로 개발된 React Developer Tools라는 도구를 이용하는 것이 좋음
