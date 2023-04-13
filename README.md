@@ -6,7 +6,23 @@
 
 ## 작성코드
 
+#### 생명주기 함수 사용해보기  
+Notification.jsx에 추가  
+```js
+  componentDidMount(){
+    console.log("componentDidMount() called.");
+  }
+  componentDidUpdate(){
+    console.log("componentDidUpdate() called.");
+  }
+  componentWillUnmount(){
+    console.log("componentWillUnmount() called.");
+  }
+```
 ## 학습내용
+
+React Developer Tools
+-  리액트를 위해서 별도로 개발된 React Developer Tools라는 도구를 이용하는 것이 좋음
 
 ## 0406(6주차)
 
