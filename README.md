@@ -6,7 +6,20 @@
 
 ## 작성코드
 
-#### 생명주기 함수 사용해보기  
+#### 생명주기 함수 사용해보기 
+notifications 비우기   
+```js
+    this.setState({
+        //notifications: notifications,
+     });
+```
+
+NotificationList.jsx에 추가
+```js 
+ key={notification.id}
+ id={notification.id}
+```
+
 Notification.jsx에 추가  
 ```js
   componentDidMount(){
