@@ -2,10 +2,119 @@
 
 # 안찬우(201830220)
 
+## 0413(7주차)
+
+## 작성코드
+
+## 학습내용
+
 ## 0406(6주차)
 
-## 작성코드 
+## 작성코드
+#### 6.3.1(실습) state와 생명주기 함수 사용하기
 
+#### index.js
+```js
+    import NotificationList from './chaptet6/NotificationList';
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(
+    <React.StrictMode>
+        <NotificationList/>
+    </React.StrictMode>
+    );
+```
+#### NotificationList.jsx
+```js
+    import React from "react";
+    import Notification from "./Notification";
+
+    const reservedNotifications = [
+    {
+        messge: "안녕하세요, 오늘 일정을 알려드립니다.",
+    },
+    {
+        messge: "점심 식사 시간입니다.",
+    },
+    {
+        messge: "이제 곧 미팅이 시작됩니다.",
+    },
+    ];
+
+    var timer;
+
+    class NotificationList extends React.Component{
+    constructor(props){
+        super(props);
+
+        this.state = {
+        Notifications: [],
+        };
+    }
+    componentDidMount(){    //JS의 setInterval()함수를 사용해서 1초마다 작업을 수행중
+        const {notifications} = this.state;
+        timer = setInterval(() => {     //Line4 에서 설정해 놓은 배열 reservedNotification로 부터 데이터를 하나씩 가져아 state에 있는 notification 배열에 넣고 업데이트
+        if(notifications.length < reservedNotifications.length){
+            const index = notifications.length;
+            notifications.push(reservedNotifications[index]);
+            this.setState({
+            notifications: notifications,
+            });
+        } else {
+            clearInterval(timer);
+        }
+        }, 1000);
+    }
+    render(){
+        return(
+        <div>
+            {this.state.notifications.map((notification) => {
+            return <Notification messge={notification.messge}/>;
+            })}
+        </div>
+        );
+    }
+    }
+    export default NotificationList;
+```
+#### Notification.jsx  
+```js
+    import React from "react";
+
+    const styles = {
+    wrapper: {
+        margin: 8,
+        padding: 8,
+        display: "flex",
+        flexDirection: "row",
+        border: "1px solid grey",
+        borderRadius: 16,
+    },
+    messageText:{
+        color: "black",
+        fontSize: 16,
+    },
+    };
+
+    class Notification extends React.Component{
+    constructor(props){
+        super(props);
+        
+        this.state = {};
+    }
+    render(){
+        return(
+        <div style={styles.wrapper}>
+            <span style={styles.messageText}>
+            {this.props.message}
+            </span>
+        </div>
+        );
+    }
+    }
+
+    export default Notification;
+```
 #### 5.6(실습) 댓글 컴포넌트 만들기
 
 #### Comment.jsx  
@@ -57,15 +166,18 @@ root.render (
 ```
 
 ## 학습내용
+#### 6.3.2 React Developer Tools 설치하기
+
+React Developer Tools검색
 
 #### 6.2 생명주기 알아보기
-    생명주기는 컴포넌트의 생성 시점, 사용 시점, 종료 시점을 나타내는 것
-    constructor가 실행되면서 컴포넌트가 생성
-    생성 직후 conponentDidMount()함수가 호출됨
-    컴포넌트가 소멸하기 전까지 여러번 렌더링
-    렌더링은 porps, setState(), forceUpdate()에 의해 상태가 변경되면 이루어짐
-    렌더링이 끝나면 conponentDinUpdate()함수가 호출
-    컴포넌트가 언마운트 되면 conponentWillUnmount()함수가 호출
+    -생명주기는 컴포넌트의 생성 시점, 사용 시점, 종료 시점을 나타내는 것
+    -constructor가 실행되면서 컴포넌트가 생성
+    -생성 직후 conponentDidMount()함수가 호출됨
+    -컴포넌트가 소멸하기 전까지 여러번 렌더링
+    -렌더링은 porps, setState(), forceUpdate()에 의해 상태가 변경되면 이루어짐
+    -렌더링이 끝나면 conponentDinUpdate()함수가 호출
+    -컴포넌트가 언마운트 되면 conponentWillUnmount()함수가 호출
 
 #### component
 
