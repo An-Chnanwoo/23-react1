@@ -10,7 +10,7 @@
 notifications 비우기   
 ```js
 this.setState({
-    //notifications: notifications,
+    notifications: []//notifications,
 });
 ```
 
