@@ -37,8 +37,10 @@ Notification.jsx에 추가
     - useRef()혹은 레퍼런스를 사용하기 위한 훅
     - 레퍼런스란 '특정 컴포넌트에 접근할 수 있는 객체'를 의미
     - useRef() 혹은 바로 이 레퍼런스 객체를 반환
-    - 레퍼런스 객체에는 .current라는 속성이 있는데 이것은 현재 참조하고 있는 엘리먼트를 의미
-    - const refContainer = useRef(초기값);
+    - 레퍼런스 객체에는 .current라는 속성이 있는데 이것은 현재 참조하고 있는 엘리먼트를 의미   
+```js
+    const refContainer = useRef(초기값);
+```
 #### 7.5 useCallback
     - useCallback()은 useMemo()와 유사한 역할
     - 차이점은 '값이 아닌 함수를 반환'하는 점
