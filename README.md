@@ -9,9 +9,9 @@
 #### 생명주기 함수 사용해보기 
 notifications 비우기   
 ```js
-    this.setState({
-        //notifications: notifications,
-     });
+this.setState({
+    //notifications: notifications,
+});
 ```
 
 NotificationList.jsx에 추가
