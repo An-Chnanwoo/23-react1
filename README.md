@@ -36,7 +36,13 @@ Notification.jsx에 추가
 #### 7.8 나만의 훅 만들기 (p226 ~ p232)
     1. 커스텀 훅을 만들어야 하는 상황
     2. 커스텀 훅 추출하기
+```js
+    const[isOnline, setIsOnline] = useState(null);
+```
     3. 커스텀 훅 사용하기
+```js
+    const isOnline = useUserStatus(props.user.id);
+```
 #### 7.7 훅의 규칙(p224)
     - 첫 번째 규칙은 무조건 '최상위 레벨에서만 호출'해야만 한다는 것
     - 반복문이나 조건문 또는 중첩된 함수들 안에서 훅을 호출하면 안됨
