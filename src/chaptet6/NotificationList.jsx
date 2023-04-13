@@ -3,12 +3,15 @@ import Notification from "./Notification";
 
 const reservedNotifications = [
   {
+    id: 1,
     messge: "안녕하세요, 오늘 일정을 알려드립니다.",
   },
   {
+    id: 2,
     messge: "점심 식사 시간입니다.",
   },
   {
+    id: 3,
     messge: "이제 곧 미팅이 시작됩니다.",
   },
 ];
@@ -41,7 +44,12 @@ class NotificationList extends React.Component{
     return(
       <div>
         {this.state.notifications.map((notification) => {
-          return <Notification messge={notification.messge}/>;
+          return (
+            <Notification 
+                key={notification.id}
+                id={notification.id}
+                messge={notification.messge}/>
+            );
         })}
       </div>
     );
