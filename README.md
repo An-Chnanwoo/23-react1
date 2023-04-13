@@ -33,7 +33,7 @@ Notification.jsx에 추가
 ```
 ## 학습내용
 
-#### useEffect
+#### 7.2.2 useEffect
     - useState와 함께 가장 많이 사용하는 Hook
     - 사이드 이펙트를 수행하기 위한 것
     - 영어로 부작용을 의미, '개발자가 의도하지 않은 코드가 실행되면서 버그가 발생하는 것'
@@ -44,7 +44,7 @@ Notification.jsx에 추가
     - useEffect가 effect에 가깝다고 설명하지만 오해에 불과함
     - Side effet는 본래의 목적ㅂ다 부수적으로 다른효과가 있는것을 의미
 
-#### useState()함수 사용법
+#### 7.2.1 useState()함수 사용법
 ```js
     import React, {useState} from "react"
 
