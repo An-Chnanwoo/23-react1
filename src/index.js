@@ -9,11 +9,12 @@ import Clock from './chapter4/Clock';
 import CommentList from './chapter5/CommentList';
 import NotificationList from './chaptet6/NotificationList';
 import Accommodate from './chapter7/Accommodate';
+import ConfirmButton from './chapter8/ConfirmButton';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Accommodate/>
+    <ConfirmButton/>
   </React.StrictMode>
 );
 // If you want to start measuring performance in your app, pass a function
