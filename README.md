@@ -16,6 +16,20 @@
 - bind를 사용하지 않으면 this.handleCick은 글로벌 스코프에서 호출되어, undefined로 사용 못 함   
 - bind를 사용하지 않으려면 화살표함수를 사용해도 됨
 - 하지만 클래스 컴포넌트는 이제 거의 사용하지 않음
+
+- 함수형에서 이벤트 핸들러를 정화하는 방법은 2가지
+    1. 방법 1. 함수 안에 함수로 정의
+    ```js
+        function handleCick(){
+            setIsToggleOn((isToggleOn) => !isToggleOn);
+        }
+    ```
+    2. 방법 2. arrow function을 사용하여 정의
+    ```js
+        const handleClick = () => {
+            setIsToggleOn((isToggleOn) => !isToggleOn);
+        }
+- 함수형에서는 tHis를 사용하지 않고 onClick에서 바로 HandleClick을 넘김
 #### 8.1.1 이벤트 처리하기   
 
 - DOM에서 클릭 이벤트를 처리하는 예제 코드
