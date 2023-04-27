@@ -9,21 +9,28 @@
 ## 학습내용
 
 #### Chapter8. 이벤트 핸들링
-#### 8.1 이벤트 처리하기   
+
+#### 8.1.2 d이벤트 핸들러 추가 방법
+
+- 버튼을 클릭하면 handleCick() 함수 호출하도록 되어 있음   
+- bind를 사용하지 않으면 this.handleCick은 글로벌 스코프에서 호출 = undefined로 사용 못함   
+- bind를 사용하지 않으려면 화살표함수를 사용해도 됨
+- 하지만 클래스 컴포넌트는 이제 거의 사용하지 않음
+#### 8.1.1 이벤트 처리하기   
 
 - DOM에서 클릭 이벤트를 처리하는 예제 코드
-    ```js
-        <button onClick="activate()">
-            Activate
-        </button>
-    ```
+```js
+    <button onClick="activate()">
+        Activate
+    </button>
+ ```
 
 - React에서 클릭이벤트 처리하는 예제 코드   
-    ```js
-        <button onClick={activate}>
-            Activate
-        </button>
-    ```
+ ```js
+     <button onClick={activate}>
+        Activate
+    </button>
+ ```
 
 - 둘의 차이점은
         1. 이벤트 이름이 onClick에서 onClick으로 변경
