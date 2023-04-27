@@ -46,7 +46,25 @@ export default ConfirmButton;
 
 #### Chapter9. 조건부 렌더링
 
-#### 9.2 
+#### 9.2 엘리먼트 변수
+
+- 렌더링해야 될 컴포넌트를 변수처럼 사용하는 방법이 엘리먼트 변수
+- 272p 코드 처럼 state에 따라 button 변수에 컴포넌트 객체를 저장하여 return문에서 사용
+
+```js
+let button;
+if(isLoggedIn){
+    button = <LogoutButton onClick={handleLogoutClick}/>;
+} else {
+    button = <LoginButton onClick={handleLoginClick}/>;
+}
+return (
+    <div>
+        <Greeting isLoggedIn={isLoggedIn}/>
+        {button}
+    </div>
+)
+```
 #### 9.1 조건부 렌더링이란?
 
 ```js
