@@ -44,6 +44,24 @@ export default ConfirmButton;
 
 ## 학습내용
 
+#### Chapter9. 조건부 렌더링
+
+#### 9.2 
+#### 9.1 조건부 렌더링이란?
+
+```js
+functing Greeting(props){
+    const isLoggedIn = props.isLoggedIn;
+    if (isLoggedIn){
+        return <UserGreeting/>;
+    }
+    return <UserGreeting/>;
+}
+```
+
+    - props로 전달 받은 isLoggedIn이 true면 <UserGreeting/>을,   
+    false면 <GuestGreeting/>을 return   
+    - 이와 같은 렌더링을 조건부 렌더링
 #### Chapter8. 이벤트 핸들링
 
 #### 8.2 Arguments 전달하기
