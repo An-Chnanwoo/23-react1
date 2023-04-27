@@ -60,7 +60,7 @@ functing Greeting(props){
 ```
 
     - props로 전달 받은 isLoggedIn이 true면 <UserGreeting/>을,   
-    false면 <GuestGreeting/>을 return   
+      false면 <GuestGreeting/>을 return   
     - 이와 같은 렌더링을 조건부 렌더링
 #### Chapter8. 이벤트 핸들링
 
