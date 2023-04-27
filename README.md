@@ -6,7 +6,7 @@
 
 ## 작성코드
 
-#### 8.3 클릭 이벤트 처리하기
+#### 8.3 (실습) 클릭 이벤트 처리하기
 #### ConfirmButton.jsx   
 ```js
 import React from "react";
