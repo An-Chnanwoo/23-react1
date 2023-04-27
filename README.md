@@ -12,19 +12,19 @@
 
 #### 8.2 Arguments 전달하기
 
-- 함수를 정의할 때는 파라미터 혹은 매개변수
-- 함수를 사용할 때는 아귀먼트 혹은 인자
+- 함수를 정의할 때는 파라미터(Parameter) 혹은 매개변수
+- 함수를 사용할 때는 아귀먼트(Argument) 혹은 인자
 - 이벤트 핸들러에 매개변수를 전달해야 하는 경우도 많음
 
 ```js
-    <button onClick={(event) => this.deleteItem(id, event)}> 삭제하기</button>
-    <button onClick={this.deleteItem.bind(this, id)}> 삭제하기</button>
+<button onClick={(event) => this.deleteItem(id, event)}> 삭제하기</button>
+<button onClick={this.deleteItem.bind(this, id)}> 삭제하기</button>
 ```
-    - 위 코드는 모두 동일한 역할을 하지만 하나는 화살표 함수를 다른 하나는 bind를 이용
-    - event라는 매개변수는 리액트의 이벤트 객체를 의미
-    - 두 방법 모두 첫 번째 매개변수는 id이고 두 번째 매개변수로 event 전달
-    - 첫 번째코드는 명시적으로 event를 매개변수로 넣어줌
-    - 두 번째코드는 id 이후 두번째 매개변수로 event가 자동 전달
+- 위 코드는 모두 동일한 역할을 하지만 하나는 화살표 함수를 다른 하나는 bind를 이용
+- event라는 매개변수는 리액트의 이벤트 객체를 의미
+- 두 방법 모두 첫 번째 매개변수는 id이고 두 번째 매개변수로 event 전달
+- 첫 번째코드는 명시적으로 event를 매개변수로 넣어줌
+- 두 번째코드는 id 이후 두번째 매개변수로 event가 자동 전달
 
 
 #### 8.1.2 이벤트 핸들러 추가 방법
