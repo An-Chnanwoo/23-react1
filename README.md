@@ -7,37 +7,6 @@
 ## 작성코드
 
 #### 9.5 (실습) 로그인 여부를 나타내는 툴바 만들기
-
-#### LandingPage.jsx   
-```js
-import React, {useState} from "react";
-import Toolbar from "./Toolbar";
-
-function LandingPage(props){
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const onClickLogin = () => {
-    setIsLoggedIn(true);
-  };
-
-  const onClickLogout = () => {
-    setIsLoggedIn(false);
-  };
-
-  return(
-    <div>
-      <Toolbar
-        isLoggedIn={isLoggedIn}
-        onClickLogin={onClickLogin}
-        onClickLogout={onClickLogout}
-      />
-      <div style={{padding: 16}}>소플과 함께하는 리액트 공부!</div>
-    </div>
-  );
-}
-
-export default LandingPage;
-```
 #### Toolbar.jsx   
 ```js
 import React from "react";
@@ -71,6 +40,36 @@ function Toolbar(props){
 }
 
 export default Toolbar;
+```
+#### LandingPage.jsx   
+```js
+import React, {useState} from "react";
+import Toolbar from "./Toolbar";
+
+function LandingPage(props){
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const onClickLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  const onClickLogout = () => {
+    setIsLoggedIn(false);
+  };
+
+  return(
+    <div>
+      <Toolbar
+        isLoggedIn={isLoggedIn}
+        onClickLogin={onClickLogin}
+        onClickLogout={onClickLogout}
+      />
+      <div style={{padding: 16}}>소플과 함께하는 리액트 공부!</div>
+    </div>
+  );
+}
+
+export default LandingPage;
 ```
 
 #### 8.3 (실습) 클릭 이벤트 처리하기
