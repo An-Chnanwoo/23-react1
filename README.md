@@ -46,6 +46,19 @@ export default ConfirmButton;
 
 #### Chapter9. 조건부 렌더링
 
+#### 9.4 컴포넌트 렌더링 막기    
+- 컴포넌트를 렌더링하고 싶지 않을 때에는 null을 리턴
+
+```js
+function WarningBanner(props){
+    if(!props.warning){
+        return null;
+    }
+    return(
+        <div>경고!</div>
+    );
+}
+```
 #### 9.3 인라인 조건
 
 - 필요한 곳에 조건문을 직접 넣어 사용하는 방법
