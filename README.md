@@ -46,6 +46,13 @@ export default AttendanceBook;
 
 #### Chapter11. 폼
 
+#### 11.6 여러 개의 입력 다루기
+- 하나의 컴포넌트에서 여러개의 입력을 다루기 위해서는 여러 개의 state를 선언
+#### 11.5 File input 태그
+- File input 태그는 그 값이 읽기 전용이기 때문에 리액트에서는 비제어 컴포넌트
+```js
+<input type = "file"/>
+```
 #### 11.4 select 태그
 - select태그도 textarea와 동일
 - 목록에서 다중으로 선택이 되도록 하려면 miltiple속성 값을 true로 변경
