@@ -5,7 +5,43 @@
 ## 0504(10주차)   
 
 ## 작성코드   
-#### 10.5 (실습) 출석부 출력하기
+#### 10.5 (실습) 출석부 출력하기   
+
+#### AttendanceBook.jsx
+```js
+import React from "react";
+
+const students = [
+  {
+    id: 1,
+    name: "Inje",
+  },
+  {
+    id: 2,
+    name: "Steve",
+  },
+  {
+    id: 3,
+    name: "Bill",
+  },
+  {
+    id: 4,
+    name: "Jeff",
+  },
+];
+
+function AttendanceBook(props){
+  return(
+    <ul>
+      {students.map((student) => {
+        return <li key={student.id}>{student.name}</li>
+      })}
+    </ul>
+  );
+}
+
+export default AttendanceBook;
+```
 
 ## 학습내용
 

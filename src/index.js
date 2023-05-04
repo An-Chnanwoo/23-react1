@@ -11,11 +11,12 @@ import NotificationList from './chaptet6/NotificationList';
 import Accommodate from './chapter7/Accommodate';
 import ConfirmButton from './chapter8/ConfirmButton';
 import LandingPage from './chapter9/LandingPage';
+import AttendanceBook from './chapter10/AttendanceBook';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <LandingPage/>
+    <AttendanceBook/>
   </React.StrictMode>
 );
 // If you want to start measuring performance in your app, pass a function
