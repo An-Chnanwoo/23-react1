@@ -118,10 +118,11 @@ function tryConvert(temperature, convert){
     ...
 }
 ```
-    ```js
-        tryConvert('abc', toCelsius) //empty string을 리턴
-        tryConvert('10.22', toFahrenheit) //'50.396'을 리턴
-    ```
+
+```js
+    tryConvert('abc', toCelsius) //empty string을 리턴
+    tryConvert('10.22', toFahrenheit) //'50.396'을 리턴
+ ```
 
 4. Shared State 적용하기(p342)
 ```js
