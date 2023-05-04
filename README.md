@@ -101,6 +101,7 @@ function BoilingVerdict(props){
 }
 ```
 p338 ~ p339   
+
 2. 입력 컴포넌트 추출하기   
 - 온도를 입력받기 위한 TemperatureInput 컴포넌트
 ```js
