@@ -94,7 +94,7 @@ export default AttendanceBook;
 - 어떤 컴포넌트의 state에 있는 데이터를 여러 개의 하위 컴포넌트에서 공통적으로 사용하는 경우
 - 하위 컴포넌트가 공통된 부모 컴포넌트의 state를 공유하여 사용하는 것을 shared state
 
-#### Chapter11. 폼
+### Chapter11. 폼
 #### 11.7 Input Null Value
 - 제어 컴포넌트에 value prop을 정해진 값으로 넣으면 코드를 수정하지 않는 한 입력값 변경 불가능
 - value prop은 넣되 자유롭게 입력할 수 있도록 만들고 싶으면 값이 undefined 또는 null을 넣는다
@@ -170,7 +170,7 @@ funtion NameForm(props){
 </form>
 ```
 
-#### Chapter10. 리스트와 키
+### Chapter10. 리스트와 키
 #### 10.4 리스트의 키에 대해 알아보기   
     - 리스트에서는 키는 "리스트에서 아이템을 구별하기 위한 고유한 문자열"   
     - 이 키는 리스트에서 어떤 아이템을 변경, 추가 또는 제거되었는지 구분하기 위해 사용
@@ -342,7 +342,7 @@ export default ConfirmButton;
 
 ## 학습내용
 
-#### Chapter9. 조건부 렌더링
+### Chapter9. 조건부 렌더링
 #### 9.4 컴포넌트 렌더링 막기    
 - 컴포넌트를 렌더링하고 싶지 않을 때에는 null을 리턴
 
@@ -402,7 +402,7 @@ functing Greeting(props){
     - props로 전달 받은 isLoggedIn이 true면 <UserGreeting/>을,   
       false면 <GuestGreeting/>을 return   
     - 이와 같은 렌더링을 조건부 렌더링
-#### Chapter8. 이벤트 핸들링
+### Chapter8. 이벤트 핸들링
 
 #### 8.2 Arguments 전달하기
 
