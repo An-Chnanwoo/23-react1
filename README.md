@@ -10,7 +10,31 @@
 
 #### Chapter10. 리스트와 키
 
-#### 10.3 기본적인 리스트 컴포넌트
+#### 10.4 리스트의 키에 대해 알아보기   
+- 리스트에서는 키는 "리스트에서 아이템을 구별하기 위한 고유한 문자열"   
+- 이 키는 리슽트에서 어떤 아이템을 변경, 추가 또는 제거되었는지 구분하기 위해 사용
+- 키는 같은 리스트에 있는 엘리언트 사이에서만 고유한 값이면 충분
+
+#### 10.3 기본적인 리스트 컴포넌트   
+- 앞서 작성한 코드를 변도의 컴포넌트로 분리
+- 이 컴포넌트는 props로 받은 숫자를 numbersㄹ 받아 리스트로 렌더링
+```js
+function NumberList(props){
+    const {numbers} = numbers.map((number) =>
+        <li>{number}</li>
+    );
+    return (
+        <ul>{listItems}</ul>
+    );
+}
+const numbers = [1, 2, 3, 4, 5];
+ReactDOM.render(
+    <NumberList numbers={numbers}/>,
+    document.getElementById('root')
+);
+```
+- "리스트 아이템에 무조건 키가 있어야 한다"는 경고 문구가 발생
+- key에 props가 있어야함
 #### 10.2 여러 개의 컴포넌트 렌더링하기   
 - 배열에 들어있는 각 변수에 어떤 처리를 한 뒤 리턴하는 것   
 - 같은 컴포넌트를 화면에 반복적으로 나타내야 할 경우 배열에 들어 있는 map함수를 이용   
