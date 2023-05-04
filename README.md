@@ -5,8 +5,52 @@
 ## 0504(10주차)   
 
 ## 작성코드   
-#### 10.5 (실습) 출석부 출력하기   
 
+#### 11.8 (실습) 사용자 정보 입력받기
+#### SignUp.jsx
+```js
+import React, {useState} from "react";
+
+function SignUp(props){
+  const [name, setName] = useState("");
+  const [gender, setGender] = useState("남자");
+
+  const handleChangeName = (event) =>{
+    setName(event.target.value);
+  };
+
+  const handleChangeGender = (event) =>{
+    setGender(event.target.value);
+  }
+
+  const handleSubmit = (event) =>{
+    alert(`이름: ${name}, 성별: ${gender}`);
+    event.preventDefault();
+  };
+
+  return(
+    <form onSubmit={handleSubmit}>
+      <label>
+        이름: 
+        <input type={Text} value={name} onChange={handleChangeName}/>
+      </label>
+      <br/>
+      <label>
+        성별: 
+        <select value={gender} onChange={handleChangeGender}>
+          <option value={"남자"}>남자</option>
+          <option value={"여자"}>여자</option>
+        </select>
+      </label>
+      <button type="submit">제출</button>
+    </form>
+  );
+}
+
+export default SignUp;
+```
+
+#### 10.5 (실습) 출석부 출력하기   
 #### AttendanceBook.jsx
 ```js
 import React from "react";
