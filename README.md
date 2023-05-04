@@ -42,11 +42,24 @@ function AttendanceBook(props){
 
 export default AttendanceBook;
 ```
-
 ## 학습내용
 
-#### Chapter10. 리스트와 키
+#### Chapter11. 폼
+#### 11.1 폼이란 무엇인가?   
+- 폼은 일반적으로 사용자로부터 입력을 받기위한 양식에서 사용
 
+- 이 코드는 기본적인 HTML코드
+```js
+<form>
+    <label>
+        이름:
+        <input type="text" name="name"/>
+    </label>
+    <button type="submit">제출</button>
+</form>
+```
+
+#### Chapter10. 리스트와 키
 #### 10.4 리스트의 키에 대해 알아보기   
     - 리스트에서는 키는 "리스트에서 아이템을 구별하기 위한 고유한 문자열"   
     - 이 키는 리스트에서 어떤 아이템을 변경, 추가 또는 제거되었는지 구분하기 위해 사용
@@ -217,8 +230,8 @@ export default ConfirmButton;
 ```
 
 ## 학습내용
-#### Chapter9. 조건부 렌더링
 
+#### Chapter9. 조건부 렌더링
 #### 9.4 컴포넌트 렌더링 막기    
 - 컴포넌트를 렌더링하고 싶지 않을 때에는 null을 리턴
 
