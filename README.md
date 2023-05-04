@@ -26,6 +26,13 @@ const listItems = numbers.map((number) =>
     <li>{number}</li>
 );
 ```
+- map함수에서 하나씩 꺼내서 li태그를 붙이고 listItems에 넣음   
+```js
+ReactDOM.render(
+    <ul>{listItems}</ul>,
+    document.getElementById('root')
+);
+```
 
 #### 10.1 리스트와 키란 무엇인가?   
 - 리스트를 위해 사용하는 자료구조가 바로 배열   
