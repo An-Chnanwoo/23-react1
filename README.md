@@ -46,6 +46,14 @@ export default AttendanceBook;
 
 #### Chapter11. 폼
 
+#### 11.7 Input Null Value
+- 제어 컴포넌트에 value prop을 정해진 값으로 넣으면 코드를 수정하지 않는 한 입력값 변경 불가능
+- value prop은 넣되 자유롭게 입력할 수 있도록 만들고 싶으면 값이 undefined 또는 null을 넣는다
+```js
+setTimeout(function(){
+        ReactDOM.render(<input value={null} />,rootNode);
+    }, 1000);
+```
 #### 11.6 여러 개의 입력 다루기
 - 하나의 컴포넌트에서 여러개의 입력을 다루기 위해서는 여러 개의 state를 선언
 ```js
