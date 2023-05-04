@@ -88,7 +88,7 @@ export default AttendanceBook;
 ```
 ## 학습내용
 
-#### Chapter12. State 끌어올리기
+### Chapter12. State 끌어올리기
 #### 12.1 Shared State
 - shared state는 공유된 state를 의미
 - 어떤 컴포넌트의 state에 있는 데이터를 여러 개의 하위 컴포넌트에서 공통적으로 사용하는 경우
