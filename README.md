@@ -88,8 +88,13 @@ export default AttendanceBook;
 ```
 ## 학습내용
 
-#### Chapter11. 폼
+#### Chapter12. State 끌어올리기
+#### 12.1 Shared State
+- shared state는 공유된 state를 의미
+- 어떤 컴포넌트의 state에 있는 데이터를 여러 개의 하위 컴포넌트에서 공통적으로 사용하는 경우
+- 하위 컴포넌트가 공통된 부모 컴포넌트의 state를 공유하여 사용하는 것을 shared state
 
+#### Chapter11. 폼
 #### 11.7 Input Null Value
 - 제어 컴포넌트에 value prop을 정해진 값으로 넣으면 코드를 수정하지 않는 한 입력값 변경 불가능
 - value prop은 넣되 자유롭게 입력할 수 있도록 만들고 싶으면 값이 undefined 또는 null을 넣는다
