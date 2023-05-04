@@ -124,6 +124,7 @@ function tryConvert(temperature, convert){
         tryConvert('abc', toCelsius) //empty string을 리턴
         tryConvert('10.22', toFahrenheit) //'50.396'을 리턴
     ```
+p341 ~ p342
 #### 12.1 Shared State
 - shared state는 공유된 state를 의미
 - 어떤 컴포넌트의 state에 있는 데이터를 여러 개의 하위 컴포넌트에서 공통적으로 사용하는 경우
