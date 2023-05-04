@@ -48,6 +48,16 @@ export default AttendanceBook;
 
 #### 11.6 여러 개의 입력 다루기
 - 하나의 컴포넌트에서 여러개의 입력을 다루기 위해서는 여러 개의 state를 선언
+```js
+const [haveBreakfast, setHaveBreakfast] = useState(true);
+const [numberOfGuest, setNumberOfGuest] = useState(2);
+
+const handleSubmit = (event) => {
+    alert(`아침 식사여부: ${haveBreakfast}, 방문객 수: ${numberOfGuest}`);
+}
+```
+예제 p321 ~ p322
+
 #### 11.5 File input 태그
 - File input 태그는 그 값이 읽기 전용이기 때문에 리액트에서는 비제어 컴포넌트
 ```js
