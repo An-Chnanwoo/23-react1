@@ -122,6 +122,20 @@ function tryConvert(temperature, convert){
         tryConvert('abc', toCelsius) //empty string을 리턴
         tryConvert('10.22', toFahrenheit) //'50.396'을 리턴
     ```
+
+4. Shared State 적용하기(p342)
+```js
+return(
+    ...
+        // 변경 전:  <input value={temperature} onChange={handleChange}/>
+        <input value={props.temperature} onChange={handleChange}/>
+    ...
+)
+```
+5. Calculator 컴포넌트 변경하기(p344)
+- 상위 컴포넌트인 Calculator에서 온도 값가 단위를 각각 state를 가지고 있음
+- 두 개의 하위 컴포넌트는 섭씨와 화씨로 변환된 온도 값을 업데이트하기 위한 props로 가지고 있음
+- 이처럼 공통된 상위 컴포넌트로 올려서 공유하는 방법을 사용하면 더욱 간결하고 효율적
 #### 12.1 Shared State
 - shared state는 공유된 state를 의미
 - 어떤 컴포넌트의 state에 있는 데이터를 여러 개의 하위 컴포넌트에서 공통적으로 사용하는 경우
