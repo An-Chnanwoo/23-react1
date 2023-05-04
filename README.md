@@ -91,7 +91,7 @@ export default AttendanceBook;
 ### Chapter12. State 끌어올리기
 
 #### 12.2 하위 컴포넌트에서 State 공유하기
-1. 물의 끓음 여부를 알려주는 컴포넌트   
+1. 물의 끓음 여부를 알려주는 컴포넌트(p338 ~ p339)    
 ```js
 function BoilingVerdict(props){
     if(props.celsius >= 100){
@@ -99,19 +99,17 @@ function BoilingVerdict(props){
     }
     return <p>물이 끓지 않습니다.</p>
 }
-```
-p338 ~ p339   
+```  
 
 2. 입력 컴포넌트 추출하기   
-- 온도를 입력받기 위한 TemperatureInput 컴포넌트
+- 온도를 입력받기 위한 TemperatureInput 컴포넌트(p340)   
 ```js
 function TemperatureInput(props){
     ...
 }
-```
-p340   
+```   
 
-3. 온도 변환 함수 작성하기
+3. 온도 변환 함수 작성하기(p341 ~ p342)   
 ```js
 function foCelsius(fahrenheit){
     ...
@@ -124,7 +122,6 @@ function tryConvert(temperature, convert){
         tryConvert('abc', toCelsius) //empty string을 리턴
         tryConvert('10.22', toFahrenheit) //'50.396'을 리턴
     ```
-p341 ~ p342
 #### 12.1 Shared State
 - shared state는 공유된 state를 의미
 - 어떤 컴포넌트의 state에 있는 데이터를 여러 개의 하위 컴포넌트에서 공통적으로 사용하는 경우
