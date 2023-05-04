@@ -46,6 +46,18 @@ export default AttendanceBook;
 
 #### Chapter11. 폼
 
+#### 11.3 textarea 태그
+- HTML에서는 <textarea>의 children으로 텍스트가 들어가는 형태
+```js
+<textarea>
+    안녕하세요, 여기에 이렇게 텍스트가 들어가게 됩니다.
+</textarea>
+```
+- 리액트에서는 state를 통해 value라는 attribute를 변경하여 텍스트를 표시   
+```js
+<textarea value={value} onChange={handleChange}/>
+```
+
 #### 11.2 제어 컴포넌트   
 - 제어 컴포넌트는 사용자가 입력한 값에 접근하고 제어할 수 있도록 해주는 컴포넌트
 - HTML 폼-> 자체적으로 state를 관리
