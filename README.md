@@ -46,6 +46,12 @@ export default AttendanceBook;
 
 #### Chapter11. 폼
 
+#### 11.4 select 태그
+- select태그도 textarea와 동일
+- 목록에서 다중으로 선택이 되도록 하려면 miltiple속성 값을 true로 변경
+```js
+<select multiple={true} value={['B','C']}>
+```
 #### 11.3 textarea 태그
 - HTML에서는 <textarea>의 children으로 텍스트가 들어가는 형태
 ```js
