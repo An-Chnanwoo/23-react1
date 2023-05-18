@@ -9,10 +9,60 @@
 
 ### Chapter 13. 합성vs.상속
 
+#### 13.2 상속에 대해 알아보가
+- 합성과 대비되는 개념으로 상속()이 있다
+- 자식 클래스는 부모 클래스가 가진 변수나 함수 등의 속성을 모두 갖게 되는 개념
+- 리액트에서는 상속보다는 합성을 통해 새로운 컴포넌트를 생성
+
+* 복잡한 컴포넌트를 쪼개 여러 개의 컴포넌트로 만들고, 만든 컴포넌트를 조합하여 새로운 컴포넌트로 만들자!
 #### 13.1 합성에 대해 알아보기   
 - 합성(Composition)은 '여러 개의 컴포넌트를 합쳐서 새로운 컴포넌트를 만드는 것'   
 - 조합 방법에 따라 합성의 사용 기법은 다음과 같이 나눌 수 있음
 
+  #### 3. Containment와 Specialization을 같이 사용하기
+    - Containment를 위해서 props.children을 사용하고, Specialization을을 위해 직접 정의한 props를 사용
+    - Dialog컴포넌트는 이전의 것가 비슷한데 Containment를 위해 끝부분에 props.children을 추가
+    - p366 코드 예제
+  ```js
+      function Dialog(props){
+        return(
+          <FancyBorder color="blue">
+            <h1 className="Dialog-title">
+              {props.title}
+            </h1>
+            <p className="Dialog-message">
+              {props.message}
+            </p>
+            {props.children}
+        </FancyBorder>
+        )
+      }
+
+      function SignUpDialog(props){
+        const [nickname, setNickname] = useState('');
+
+        const handleChange = (event) => {
+          setNickname(event.target.value);
+        }
+
+        const handleSigeUp = () =>{
+          alert(`어서 오세요, ${nickname}님!`);
+        }
+
+        return(
+          <Dialog
+            title=""
+            message="">
+            <input
+              value={nickname}
+              onChange={handleChange}/>
+            <button onClick={handleSignUp}>
+              가입하기
+            </button>
+          </Dialog>
+        );
+      }
+    ```
   #### 2. Specialization(특수화, 전문화), p364
     - 웰컴다이얼로그는 다이얼로그의 특별케이스
     - 범용적인 개념을 구별이 되게 구체화하는 것을 특수화라고 함
