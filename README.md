@@ -67,6 +67,18 @@ export default ProfileCard;
   - 하위 컴포넌트를 consumer 컴포넌트라 부름
   - NOTE.Provider value에서 주의해야 할 사항(p389)
 
+#### 3. Class.contextType
+  - Provider 하위에 있는 클래스 컴포넌트에서 컨텍스트의 데이터에 접근하기 위해 사용
+  - Class 컴포넌트는 더 이상 사용하지 않으므로 참고
+#### 4. Context.Consumer
+  - 함수형 컴포넌트에서 Context.Consumer를 사용하여 컨텍스트를 구독
+  - 컴포넌트의 자식으로 함수가 올 수 있는데 이것을 function as a child 라고 함
+  - Context.Consumer로 감싸주면 현재 컨텍스트의 value를 받아서 리액트 노드로 리턴
+
+#### 5. Context.displayName
+  - 컨텍스트 객체는 displayName이라는 문자열 속성을 갖는다
+  - 크롬의 리액트 개발자 도구에서는 컨텍스트의 Provider나 Consumer를 표시할 때 displayName을 함께 표시
+
 #### 14.3 컨텍스트를 사용하기 전에 고려할 점
 - 컨텍스트는 다른 레벨의 많은 컴포넌트가 특정 데이터를 필요로 하는경우에 사용
 - 무조건 컨텍스트를 사용하는 것이 좋은 것은 아님
