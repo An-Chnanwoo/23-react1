@@ -6,8 +6,45 @@
 
 ## 작성코드
 #### 13.3 (실습) Card 컴포넌트 만들기
+#### Card.jsx
+```js
+function Card(props){
+  const {title, backgroundColor, children} = props;
 
+  return(
+    <div
+      style={{
+        margin: 8,
+        padding: 8,
+        borderRadius: 8,
+        boxShadow: "0px 0px 4px grey",
+        backgroundColor: backgroundColor || "white",
+      }}
+    >
+      {title && <h1>{title}</h1>}
+      {children}
+    </div>
+  );
+}
 
+export default Card;
+```
+
+#### PorfileCard.jsx
+```js
+import Card from "./Card";
+
+function ProfileCard(props){
+  return(
+    <Card title="Inje Lee" backgroundColor="#4ea04e">
+      <p>안녕하세요, 소플입니다.</p>
+      <p>저는 리액트를 사용해서 개발하고 있습니다.</p>
+    </Card>
+  );
+}
+
+export default ProfileCard;
+```
 ## 학습내용
 ### Chapter 13. 합성vs.상속
 #### 13.2 상속에 대해 알아보가
