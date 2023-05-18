@@ -76,6 +76,25 @@ p385 예제 코드
 - p385처럼 실제 user와 avatarSize를 사용하는 것은 Avatar 컴포넌트만 아니라 여러 단계를 걸쳐 props에 전달
 - 이런 경우 컨텍스트를 사용하지 않고 Avatar 컴포넌트를 변수에 저장하여 넘겨주는 방법(9장 참고)
 - 이렇게 하면 중간 단계의 컴포넌트들은 user와 avatarSize에 대해 몰라도 됨
+
+p387 예제 코드
+```js
+function Page(props){
+  const user = props.user;
+
+  const topBar = (
+    <NavigationBar>
+      <Link href={user.permalink}>
+        <Avatar uesr={user} size={props.avatarSize}/>
+      </Link>
+    </NavigationBar>
+  );
+}
+```
+- 데이터가 많아질수록 상위 컴포넌트는 복잡
+- 어떠한 경우에는 하나의 데이터에 다양한 레벨에 있는 중첩딘 컴포넌트의 접근이 필요
+- 이러한 경우 컨텍스트가 유리
+- 컨텍스트를 사용하기에 적합한 데이터의 대표적인 예- '지역정보', 'UI테마', '캐싱된 데이터'
 #### 14.2 언제 컨텍스트를 사용해야 할까?
 - 기존의 방식대로 컴포넌트의 props를 통해 넘겨주는 예를 p382에 있음
 - 예제처럼 props를 통해 데이터를 전달하는 기존 방식은 컴포넌트가 깊어질 수록 복잡
