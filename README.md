@@ -18,80 +18,6 @@
 #### 13.1 합성에 대해 알아보기   
 - 합성(Composition)은 '여러 개의 컴포넌트를 합쳐서 새로운 컴포넌트를 만드는 것'   
 - 조합 방법에 따라 합성의 사용 기법은 다음과 같이 나눌 수 있음
-
-  #### 3. Containment와 Specialization을 같이 사용하기
-    - Containment를 위해서 props.children을 사용하고, Specialization을을 위해 직접 정의한 props를 사용
-    - Dialog컴포넌트는 이전의 것가 비슷한데 Containment를 위해 끝부분에 props.children을 추가
-    - p366 코드 예제
-  ```js
-      function Dialog(props){
-        return(
-          <FancyBorder color="blue">
-            <h1 className="Dialog-title">
-              {props.title}
-            </h1>
-            <p className="Dialog-message">
-              {props.message}
-            </p>
-            {props.children}
-        </FancyBorder>
-        )
-      }
-
-      function SignUpDialog(props){
-        const [nickname, setNickname] = useState('');
-
-        const handleChange = (event) => {
-          setNickname(event.target.value);
-        }
-
-        const handleSigeUp = () =>{
-          alert(`어서 오세요, ${nickname}님!`);
-        }
-
-        return(
-          <Dialog
-            title=""
-            message="">
-            <input
-              value={nickname}
-              onChange={handleChange}/>
-            <button onClick={handleSignUp}>
-              가입하기
-            </button>
-          </Dialog>
-        );
-      }
-    ```
-  #### 2. Specialization(특수화, 전문화), p364
-    - 웰컴다이얼로그는 다이얼로그의 특별케이스
-    - 범용적인 개념을 구별이 되게 구체화하는 것을 특수화라고 함
-    - 객체지향 언어에서는 상속을 사용하여 특수화 구현
-    - 리액트에서는 합성을 사용하여 특수화를 구현
-    - 다음 예와 같이 특수화는 범용적으로 쓸 수 있는 컴포넌트를 만들어 놓고 특수한 목적으로 사용
-    ```js
-    function Dialog(props){
-      return(
-        <FancyBorder color="blue">
-          <h1 className="Dialog-title">
-            {props.title}
-          </h1>
-          <p className="Dialog-message">
-            {props.message}
-          </p>
-      </FancyBorder>
-      )
-    }
-
-    function WelcomeDialog(props){
-      return(
-        <Dialog
-          title="어서오세요"
-          message="우리 사이트에 방문하신 것을 환영합니다"
-        />
-      );ㄴ
-    }
-    ```
   #### 1. Containment(담다, 포합하다, 격리하다), p361
     - 특정 컴포넌트를가 하위 컴포넌트를 포함하는 형태의 합성 방법
     - 컴포넌트에 따라서는 어떤 자식 엘리먼트가 들어올 지 미리 예상할 수 없는 경우 있음
@@ -139,6 +65,79 @@
     );
   }
   ```
+  #### 2. Specialization(특수화, 전문화), p364
+    - 웰컴다이얼로그는 다이얼로그의 특별케이스
+    - 범용적인 개념을 구별이 되게 구체화하는 것을 특수화라고 함
+    - 객체지향 언어에서는 상속을 사용하여 특수화 구현
+    - 리액트에서는 합성을 사용하여 특수화를 구현
+    - 다음 예와 같이 특수화는 범용적으로 쓸 수 있는 컴포넌트를 만들어 놓고 특수한 목적으로 사용
+    ```js
+    function Dialog(props){
+      return(
+        <FancyBorder color="blue">
+          <h1 className="Dialog-title">
+            {props.title}
+          </h1>
+          <p className="Dialog-message">
+            {props.message}
+          </p>
+      </FancyBorder>
+      )
+    }
+
+    function WelcomeDialog(props){
+      return(
+        <Dialog
+          title="어서오세요"
+          message="우리 사이트에 방문하신 것을 환영합니다"
+        />
+      );ㄴ
+    }
+    ```
+  #### 3. Containment와 Specialization을 같이 사용하기
+    - Containment를 위해서 props.children을 사용하고, Specialization을을 위해 직접 정의한 props를 사용
+    - Dialog컴포넌트는 이전의 것가 비슷한데 Containment를 위해 끝부분에 props.children을 추가
+    - p366 코드 예제
+  ```js
+      function Dialog(props){
+        return(
+          <FancyBorder color="blue">
+            <h1 className="Dialog-title">
+              {props.title}
+            </h1>
+            <p className="Dialog-message">
+              {props.message}
+            </p>
+            {props.children}
+        </FancyBorder>
+        )
+      }
+
+      function SignUpDialog(props){
+        const [nickname, setNickname] = useState('');
+
+        const handleChange = (event) => {
+          setNickname(event.target.value);
+        }
+
+        const handleSigeUp = () =>{
+          alert(`어서 오세요, ${nickname}님!`);
+        }
+
+        return(
+          <Dialog
+            title=""
+            message="">
+            <input
+              value={nickname}
+              onChange={handleChange}/>
+            <button onClick={handleSignUp}>
+              가입하기
+            </button>
+          </Dialog>
+        );
+      }
+    ```
 ## 0511(11주차)
 
 ## 작성코드
