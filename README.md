@@ -49,6 +49,33 @@ export default ProfileCard;
 
 ### Chapter 14. 컨텍스트
 
+#### 14.3 컨텍스트를 사용하기 전에 고려할 점
+- 컨텍스트는 다른 레벨의 많은 컴포넌트가 특정 데이터를 필요로 하는경우에 사용
+- 무조건 컨텍스트를 사용하는 것이 좋은 것은 아님
+- 컴포넌트와 컨텍스트가 연동되면 재사용성이 떨어지기 때문
+- 따라서 다른 레벨의 많은 컴포넌트가 데이터를 필요로 하는 경우가 아니면
+props를 통해 데이터를 전달하는 컴포넌트 합성 방법이 더 적합
+
+p385 예제 코드
+```js
+//Page컴포넌트는 PageLayout 컴포넌트를 렌더링
+<Page user={user} avatarSize={avatarSize}/>
+
+//PageLayout컴포넌트는 NavigationBar 컴포넌트를 렌더링
+<PageLayout user={user} avatarSize={avatarSize}/>
+
+//NavigationBar컴포넌트는 Link 컴포넌트를 렌더링
+<NavigationBar user={user} avatarSize={avatarSize}/>
+
+//Link컴포넌트는 Avatar 컴포넌트를 렌더링
+<Link href={user.permalink}>
+  <Avartar user={user} avatarSize={avatarSize}/>
+</Link>
+```
+
+- p385처럼 실제 user와 avatarSize를 사용하는 것은 Avatar 컴포넌트만 아니라 여러 단계를 걸쳐 props에 전달
+- 이런 경우 컨텍스트를 사용하지 않고 Avatar 컴포넌트를 변수에 저장하여 넘겨주는 방법(9장 참고)
+- 이렇게 하면 중간 단계의 컴포넌트들은 user와 avatarSize에 대해 몰라도 됨
 #### 14.2 언제 컨텍스트를 사용해야 할까?
 - 기존의 방식대로 컴포넌트의 props를 통해 넘겨주는 예를 p382에 있음
 - 예제처럼 props를 통해 데이터를 전달하는 기존 방식은 컴포넌트가 깊어질 수록 복잡
