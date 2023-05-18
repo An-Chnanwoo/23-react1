@@ -45,7 +45,7 @@
   ```
   - FanctBorder 컴포넌트 사용 예제
   - WelconDialog 컴포넌트는 FancyBorder 컴포넌트 사용
-  - FancyBorder 컴포넌트는 <h1>과 <p>태그에 props전달
+  - FancyBorder 컴포넌트는 h1과 p태그에 props전달
   ```js
   function WelcomeDialog(props){
     return(
