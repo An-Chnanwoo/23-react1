@@ -65,7 +65,7 @@ export default ProfileCard;
   ```
   - Provider 컴포넌트에는 value라는 prop이 있고 이것은 Provider 컴포넌트 하위에 있는 컴포넌트다
   - 하위 컴포넌트를 consumer 컴포넌트라 부름
-
+  - NOTE.Provider value에서 주의해야 할 사항(p389)
 
 #### 14.3 컨텍스트를 사용하기 전에 고려할 점
 - 컨텍스트는 다른 레벨의 많은 컴포넌트가 특정 데이터를 필요로 하는경우에 사용
