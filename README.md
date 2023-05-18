@@ -46,8 +46,18 @@ function ProfileCard(props){
 export default ProfileCard;
 ```
 ## 학습내용
-
 ### Chapter 14. 컨텍스트
+
+#### 14.4 컨텍스트 API
+
+1. React.createContext
+  - 컨텍스트를 생성하기 위한 함수
+  - 파라메타에는 기본값을 넣음
+  - 하위 컴포넌트는 가장 가까운 상위 레벨의 Provider부터 컨텍스트를 받게 되지만,
+  만일 Provider를 찾을 수 없다면 위에서 설장한 기본값을 사용하게 된다
+  ```js
+  const MyContext= React.createContext(기본값);
+  ```
 
 #### 14.3 컨텍스트를 사용하기 전에 고려할 점
 - 컨텍스트는 다른 레벨의 많은 컴포넌트가 특정 데이터를 필요로 하는경우에 사용
