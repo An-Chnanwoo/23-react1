@@ -29,7 +29,7 @@
       );
     }
     ```
-  React.createElement()에 관하여...
+  #### React.createElement()에 관하여...
   - 교제 150page에서 설명한 것과 같이 jsx를 사용하지 않는 경우의 props 전달 방법
 
   - JSX를 이용한 간단한 방법
