@@ -50,7 +50,7 @@ export default ProfileCard;
 
 #### 14.4 컨텍스트 API
 
-1. React.createContext
+#### 1. React.createContext
   - 컨텍스트를 생성하기 위한 함수
   - 파라메타에는 기본값을 넣음
   - 하위 컴포넌트는 가장 가까운 상위 레벨의 Provider부터 컨텍스트를 받게 되지만,
@@ -58,6 +58,15 @@ export default ProfileCard;
   ```js
   const MyContext= React.createContext(기본값);
   ```
+
+#### 2. Context.Provider
+  - Context.Provider 컴포넌트르 하위 컴포넌트를 감싸주면 모든 하위 컴포넌트들이 해당 컨텍스트에 접근 가능
+  ```js
+  <MyContext.Provider value={/*some value*/}>
+  ```
+  - Provider 컴포넌트에는 value라는 prop이 있고 이것은 Provider 컴포넌트 하위에 있는 컴포넌트다
+  - 하위 컴포넌트를 consumer 컴포넌트라 부름
+
 
 #### 14.3 컨텍스트를 사용하기 전에 고려할 점
 - 컨텍스트는 다른 레벨의 많은 컴포넌트가 특정 데이터를 필요로 하는경우에 사용
