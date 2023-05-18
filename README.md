@@ -49,6 +49,32 @@ export default ProfileCard;
 
 ### Chapter 14. 컨텍스트
 
+#### 14.2 언제 컨텍스트를 사용해야 할까?
+- 기존의 방식대로 컴포넌트의 props를 통해 넘겨주는 예를 p382에 있음
+- 예제처럼 props를 통해 데이터를 전달하는 기존 방식은 컴포넌트가 깊어질 수록 복잡
+- 반복적인 코드를 계속해서 작성해야 하기 때문에 비효율적이고 가독성이 떨어짐
+- 컨텍스트를 사용하면 이러한 문제점을 깔끔하게 개선 가능   
+
+- React.createContext()함수를 사용해서 ThemeContext라는 이름의 컨텍스트를 생성
+- 컨텍스트를 사용하려면 컴포넌트의 상위 컴포넌트에서 Provider로 감싸주어야 함
+p382 ~ p383 예제 코드
+```js
+function App(props){
+  return <Toolbar theme="dark"/>;
+}
+
+function Toolbar(props){
+  return(
+    <div>
+      <ThemeButton theme={props.theme}/>
+    </div>
+  )
+}
+
+function ThemeButton(props){
+  return <Button theme={props.theme}/>;
+}
+```
 #### 14.1 컨텍스트란 무엇인가?
 - 기존의 일반적인 리액트에서는 데이터가 컴포넌트의 props를 통해 부모에서 자식을 단방향 전달
 - 컨텍스트는 리액트 컴포넌트들 사이에서 데이터를 기존의 props를 통해 전달하는 방식대신
