@@ -18,7 +18,8 @@
     - 컴포넌트에 따라서는 어떤 자식 엘리먼트가 들어올 지 미리 예상할 수 없는 경우 있음
     - 범용적인 '박스'역할을 하는 Sidebar 혹은 Dialog와 같은 컴포넌트에서 자주 볼 수 있음
     - 이런 컴포넌트에서는 children prop을 사용하여 자식 엘리먼트를 출력해 그대로 전달
-    - 이때 children prop은 컴포넌트의 props에 기본적으로 들어있는 children속성을 사용
+    - 이때 children prop은 컴포넌트의 props에 기본적으로 들어있는 children속성을 사용   
+    
     - 다음과 같이 props.children을 사용하면 해당 컴포넌트의 하위 컴포넌트가 모두 children으로 들어감
     ```js
     function FancyBorder(props){
