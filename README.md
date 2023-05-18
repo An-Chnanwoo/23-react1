@@ -56,7 +56,8 @@ export default ProfileCard;
 - 컨텍스트를 사용하면 이러한 문제점을 깔끔하게 개선 가능   
 
 - React.createContext()함수를 사용해서 ThemeContext라는 이름의 컨텍스트를 생성
-- 컨텍스트를 사용하려면 컴포넌트의 상위 컴포넌트에서 Provider로 감싸주어야 함
+- 컨텍스트를 사용하려면 컴포넌트의 상위 컴포넌트에서 Provider로 감싸주어야 함   
+
 p382 ~ p383 예제 코드
 ```js
 function App(props){
