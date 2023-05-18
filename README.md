@@ -58,7 +58,6 @@ export default ProfileCard;
   ```js
   const MyContext= React.createContext(기본값);
   ```
-
 #### 2. Context.Provider
   - Context.Provider 컴포넌트르 하위 컴포넌트를 감싸주면 모든 하위 컴포넌트들이 해당 컨텍스트에 접근 가능
   ```js
