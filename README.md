@@ -17,7 +17,7 @@
   모든 값을 한 번에 제공하는 render prop 컴포넌트를 직접 만드는 것을 고려
 
 #### 리액트에서 데이터를 전달하는 방법
-  props, state, context
+       props, state, context
 ## 0518(12주차)
 
 ## 작성코드
