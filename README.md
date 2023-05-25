@@ -81,6 +81,7 @@ export default DarkOrLight;
 #### 15.1.2 CSS 문법과 선택자
   - 선택자를 먼저 쓰고 이후에 적용할 스타일을 중괄호 안에 세미콜론으로 구분하여 기술
 
+### Chapter 14. 컨텍스트
 #### 14.6 useContext
 
  - Consumer컴포넌트보다 더 좋은 방법 -> Hook
