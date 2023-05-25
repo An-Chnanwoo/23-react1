@@ -8,6 +8,30 @@
 
 ## 학습내용
 
+#### 14.6 useContext
+
+ - Consumer컴포넌트보다 더 좋은 방법 -> Hook
+ - useContext() 훅은 React.createContext()함수 호출로 생성된 컨텍스트 객체의 인자를 값을 리턴
+ ```js
+ function MyComponent(props){
+  const value = useContext(MyContext);
+
+  return (
+    ...
+  )
+ }
+ ```
+ - useContext() 훅을 사용할 때는 객체를 넣어줘야 함
+
+```js
+//올바른 사용법
+useContext(MyContext);
+```   
+```js
+//잘못된 사용법
+useContext(MyContext.Consumer);
+useContext(MyContext.Provider);
+```
 #### 14.5 여러 컨텍스트 사용하기
   - 여러 개의 컨텍스트를 동시에 사용하려면 Context.Provider를 중첩해서 사용
   - 예제 코드는 p393~394
