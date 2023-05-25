@@ -15,11 +15,12 @@ import AttendanceBook from './chapter10/AttendanceBook';
 import SignUp from './chapter11/SignUp';
 import Calculator from './chapter12/Calculator';
 import ProfileCard from './chapter13/ProfileCard';
+import DarkOrLight from './chapter14/DarkOrLight';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <ProfileCard/>
+    <DarkOrLight/>
   </React.StrictMode>
 );
 // If you want to start measuring performance in your app, pass a function

@@ -6,6 +6,69 @@
 
 ## 작성코드
 
+#### 14.7(실습) 컨텍스트를 사용하여 테마 변경 기능 만들기
+
+#### ThemeContext.jsx
+```js
+import React from "react";
+
+const ThemeContext = React.createContext();
+ThemeContext.displayName = "ThemeContext";
+
+export default ThemeContext;
+```
+#### MainContent.jsx
+```js
+import { useContext } from "react";
+import ThemeContext from "./ThemeContext";
+
+function MainContent(props) {
+  const {theme, toggleTheme} = useContext(ThemeContext);
+
+  return(
+    <div
+      style={{
+        width: "100vw",
+        height: "100vh",
+        padding: "1.5rem",
+        backgroundColor: theme == "light" ? "white" : "black",
+        color: theme == "light" ? "black" : "white",
+      }}
+    >
+      <p>안녕하세요, 테마 변경이 가능한 웹사이트 입니다.</p>
+      <button onClick={toggleTheme}>테마 변경</button>
+    </div>
+  );
+}
+
+export default MainContent;
+```
+#### DarkOrLight.jsx
+```js
+import { useState, useCallback } from "react";
+import ThemeContext from "./ThemeContext";
+import MainContent from "./MainContent";
+
+function DarkOrLight(props){
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = useCallback(() => {
+    if(theme == "light"){
+      setTheme("dark");
+    } else if (theme == "dark"){
+      setTheme("light");
+    }
+  }, [theme]);
+
+  return (
+    <ThemeContext.Provider value={(theme, toggleTheme)}>
+      <MainContent/>
+    </ThemeContext.Provider>
+  );
+}
+
+export default DarkOrLight;
+```
 ## 학습내용
 
 #### 14.6 useContext
