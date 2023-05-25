@@ -66,7 +66,7 @@ export default ProfileCard;
 
 #### 14.4 컨텍스트 API
 
-#### 1. React.createContext
+#### 1. React.createContext(중요)
   - 컨텍스트를 생성하기 위한 함수
   - 파라메타에는 기본값을 넣음
   - 하위 컴포넌트는 가장 가까운 상위 레벨의 Provider부터 컨텍스트를 받게 되지만,
